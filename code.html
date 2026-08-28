@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>GastroModern - Tu experiencia gastronómica, a tu ritmo</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-secondary-fixed": "#181c20",
+                      "tertiary-container": "#7e57f0",
+                      "on-primary-container": "#fffbff",
+                      "secondary-fixed-dim": "#c3c7cc",
+                      "on-primary-fixed": "#390b00",
+                      "secondary-container": "#dde0e5",
+                      "outline": "#8e7067",
+                      "on-tertiary-fixed": "#20005f",
+                      "background": "#fef8f4",
+                      "on-primary-fixed-variant": "#842500",
+                      "on-tertiary-fixed-variant": "#4f1bc0",
+                      "secondary-fixed": "#e0e3e8",
+                      "surface-container-highest": "#e7e1de",
+                      "on-error-container": "#93000a",
+                      "on-surface": "#1d1b19",
+                      "on-error": "#ffffff",
+                      "surface-container-lowest": "#ffffff",
+                      "tertiary": "#653ad6",
+                      "primary-fixed": "#ffdbd0",
+                      "primary": "#a93200",
+                      "surface-bright": "#fef8f4",
+                      "surface-variant": "#e7e1de",
+                      "on-surface-variant": "#5a4139",
+                      "surface-dim": "#ded9d5",
+                      "surface": "#fef8f4",
+                      "tertiary-fixed": "#e8deff",
+                      "on-background": "#1d1b19",
+                      "inverse-surface": "#32302e",
+                      "tertiary-fixed-dim": "#cdbdff",
+                      "on-secondary-container": "#5f6368",
+                      "surface-container-low": "#f8f2ef",
+                      "on-secondary": "#ffffff",
+                      "surface-tint": "#ad3300",
+                      "inverse-on-surface": "#f5f0ec",
+                      "surface-container-high": "#ede7e3",
+                      "on-tertiary-container": "#fffbff",
+                      "inverse-primary": "#ffb59e",
+                      "primary-container": "#d14307",
+                      "on-secondary-fixed-variant": "#43474c",
+                      "surface-container": "#f3ede9",
+                      "secondary": "#5b5f63",
+                      "error-container": "#ffdad6",
+                      "on-primary": "#ffffff",
+                      "error": "#ba1a1a",
+                      "on-tertiary": "#ffffff",
+                      "outline-variant": "#e3bfb4",
+                      "primary-fixed-dim": "#ffb59e"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "sm": "8px",
+                      "md": "16px",
+                      "lg": "24px",
+                      "gutter": "16px",
+                      "container-margin": "20px",
+                      "unit": "4px",
+                      "xs": "4px",
+                      "xl": "40px"
+              },
+              "fontFamily": {
+                      "label-md": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "body-md": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "headline-sm": [
+                              "Newsreader"
+                      ],
+                      "price-tag": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "display-lg": [
+                              "Newsreader"
+                      ],
+                      "body-lg": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "display-lg-mobile": [
+                              "Newsreader"
+                      ],
+                      "headline-md": [
+                              "Newsreader"
+                      ]
+              },
+              "fontSize": {
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-sm": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "price-tag": [
+                              "20px",
+                              {
+                                      "lineHeight": "1",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg-mobile": [
+                              "36px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "500"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+</head>
+<body class="bg-background text-on-background antialiased selection:bg-primary-fixed selection:text-on-primary-fixed flex flex-col min-h-screen">
+<!-- TopNavBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-gutter py-sm bg-surface/95 backdrop-blur-md shadow-sm">
+<div class="font-display-lg-mobile text-display-lg-mobile text-primary tracking-tight">
+            GastroModern
+        </div>
+<div class="hidden md:flex flex-1 max-w-md mx-lg">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-surface-container-low border border-surface-variant rounded-full font-body-md text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" placeholder="Buscar platos..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-md text-primary">
+<button class="hidden md:block font-label-md text-label-md text-primary hover:bg-surface-container-low transition-colors px-4 py-2 rounded-full cursor-pointer border border-primary/20">Califica tu experiencia</button>
+<span class="material-symbols-outlined hover:bg-surface-container-low transition-colors p-2 rounded-full cursor-pointer">shopping_cart</span>
+<span class="material-symbols-outlined hover:bg-surface-container-low transition-colors p-2 rounded-full cursor-pointer">account_circle</span>
+</div>
+</header>
+<main class="pt-20 flex-1">
+<!-- Hero Section -->
+<section class="h-[calc(100vh-80px)] min-h-[800px] flex flex-col md:flex-row w-full mb-xl">
+<!-- Top Half (Promotions/New Dishes) -->
+<div class="w-full md:w-1/2 h-1/2 md:h-full relative overflow-hidden group">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Nuevos platos y promociones" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAV9vLFXMAh6pN7VDvTbCJh67S_0-JZQd63ksb4QZKfJ2r7fVuFwSJPNvaPDkU0Vxwk50mV0cqV_B1CZy1GnZkmZeb2AR9Mi6YsaxhORTFvvmkMHbqo4Wti-mtEGyvnX9KoT-WxXJMv2Io0XOCEzS1LbLjVk4AVsYyzxoDVk1ZSkR_4qfQbOwBFgEHWJbE9uPtqP3pHTAPX2QUcSfE9JnVIK7eC_12CJygLuMyBsv_WBnb_q3_4YEw')"></div>
+<div class="absolute inset-0 bg-black/30 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute inset-0 flex flex-col justify-end p-lg md:p-xl text-white">
+<span class="bg-primary text-white font-label-md px-3 py-1 rounded-full w-max mb-sm">Novedad</span>
+<h2 class="font-display-lg-mobile text-display-lg-mobile mb-xs text-white">Nuevos Sabores</h2>
+<p class="font-body-md text-body-md text-white/90 font-light max-w-md">
+                Descubre nuestra nueva colección de platos de temporada, diseñados para sorprenderte.
+            </p>
+</div>
+</div>
+<!-- Bottom Half (Menu/Action) -->
+<div class="w-full md:w-1/2 h-1/2 md:h-full relative overflow-hidden flex items-center justify-center group">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Nuestro menú" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBqZu5lNlnwQNjyuJ5mIyHokUqIK07mifIy6yTO_iIkeOy2bKXeIf4Ei5vH7Jz2pwvwPmWV7i0k4V09ecZR0PUBM_-qpO8tLZk7vrD5bMz20dMxvA7vHmtIiIT3WH0wu6rkEOTWOqrzKIP7eEsIoQPe-RWJfcXnNET4yflrw-UMOInSWRbazNWY8cX4eldfwNRSjnkot8WhpXil-5rOoZnYOaXfgCkJqt0Pk9V6ocihMnBKO12fZpg')"></div>
+<div class="absolute inset-0 bg-black/40"></div>
+<div class="relative z-10 text-center px-lg">
+<h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg mb-md text-white">Tu experiencia, a tu ritmo</h1>
+<p class="font-body-lg text-body-lg mb-lg text-white/90 font-light max-w-lg mx-auto">
+                La alta cocina ahora es más fluida.
+            </p>
+<button class="bg-primary hover:bg-surface-tint text-on-primary font-label-md text-label-md py-4 px-8 rounded-full transition-colors shadow-lg">
+                Ver Menú
+            </button>
+</div>
+</div>
+</section>
+<!-- Cómo Funciona Section -->
+<section class="max-w-7xl mx-auto px-container-margin md:px-gutter py-xl">
+<div class="text-center mb-xl">
+<h2 class="font-headline-md text-headline-md text-primary mb-sm">Cómo funciona</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Una experiencia fluida en tres simples pasos.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
+<!-- Step 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-lg text-center shadow-[0px_4px_20px_rgba(33,37,41,0.05)] border border-surface-variant flex flex-col items-center">
+<div class="w-16 h-16 bg-surface-container-low rounded-full flex items-center justify-center mb-md text-primary">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">qr_code_scanner</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-xs">Escanear</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Usa tu cámara para acceder a nuestro menú interactivo al instante.</p>
+</div>
+<!-- Step 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-lg text-center shadow-[0px_4px_20px_rgba(33,37,41,0.05)] border border-surface-variant flex flex-col items-center">
+<div class="w-16 h-16 bg-surface-container-low rounded-full flex items-center justify-center mb-md text-primary">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">touch_app</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-xs">Ordena</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Explora los platos, personaliza tus opciones y envía tu pedido directo a cocina.</p>
+</div>
+<!-- Step 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-lg text-center shadow-[0px_4px_20px_rgba(33,37,41,0.05)] border border-surface-variant flex flex-col items-center">
+<div class="w-16 h-16 bg-surface-container-low rounded-full flex items-center justify-center mb-md text-primary">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">restaurant</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-xs">Disfruta</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Relájate y prepárate para degustar sabores excepcionales.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full px-gutter py-xl flex flex-col items-center gap-md text-center bg-surface-container-lowest border-t border-outline-variant mt-auto">
+<div class="font-display-lg-mobile text-display-lg-mobile text-on-surface mb-sm">
+            GastroModern
+        </div>
+<div class="flex flex-wrap justify-center gap-md mb-sm">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-all duration-200 hover:underline" href="#">Ubicación</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-all duration-200 hover:underline" href="#">Horarios</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-all duration-200 hover:underline" href="#">Política de Privacidad</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-all duration-200 hover:underline" href="#">Soporte</a>
+</div>
+<div class="flex flex-col items-center gap-sm mb-sm w-full pt-md border-t border-surface-variant">
+<h4 class="font-label-md text-label-md text-on-surface">Redes Sociales</h4>
+<div class="flex gap-md">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">share</span>
+</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">camera_alt</span>
+</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">video_library</span>
+</a>
+</div>
+</div>
+<p class="font-body-md text-body-md text-secondary">© 2024 GastroModern Digital. Todos los derechos reservados.</p>
+</footer>
+</body></html>
